@@ -16,7 +16,7 @@ import {
   SongDetail,
 } from './SongListStyles';
 
-// Define GenreFilter component
+
 const GenreFilter: React.FC<{ onChange: (genre: string) => void }> = ({ onChange }) => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginRight: '20px' }}>
