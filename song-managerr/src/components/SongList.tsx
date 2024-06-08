@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../store/store';
 import { removeSong } from '../store/songsSlice';
 import SongForm from './AddSong';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import {
   ListContainer,

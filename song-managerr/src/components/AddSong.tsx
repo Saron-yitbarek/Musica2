@@ -52,9 +52,9 @@ const AddSong: React.FC<AddSongProps> = ({ song, isEditing = false, onSubmit }) 
 
     try {
       if (isEditing) {
-        await dispatch(updateExistingSong(newSong as Song)).unwrap();
+        await dispatch(updateExistingSong(newSong as Song));
       } else {
-        await dispatch(createNewSong(newSong)).unwrap();
+        await dispatch(createNewSong(newSong));
       }
       if (onSubmit) onSubmit();
       setFormVisible(false);

@@ -10,7 +10,10 @@ export const StatsContainer = styled.div`
   color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
+  z-index: 10000;
+  max-width: 90%; /* or a specific max-width like 600px for better content management */
+  max-height: 90%;
+  overflow-y: auto; /* Enables scrolling if content overflows */
 `;
 
 export const StatsHeader = styled.h2`
@@ -46,6 +49,7 @@ export const ToggleButton = styled.button`
   color: white;
   font-size: 20px;
   cursor: pointer;
+  z-index: 10001;
 `;
 
 export const BackgroundOverlay = styled.div`
@@ -54,22 +58,22 @@ export const BackgroundOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 9998;
+  z-index: 9999;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.6);
 `;
 
 export const ButtonContainer = styled.div`
   position: fixed;
-  top: 100px;
+  top: 95px;
   right: 150px;
-  z-index: 9999;
+  z-index: 10001;
 `;
 
 export const StyledButton = styled.button`
   padding: 10px 20px;
   border: none;
-   background: linear-gradient(135deg, #1db954, #f9e000);
+  background: linear-gradient(135deg, #1db954, #f9e000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;

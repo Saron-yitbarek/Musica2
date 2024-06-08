@@ -21,7 +21,14 @@ const Statistics: React.FC = () => {
   const [showStatistics, setShowStatistics] = useState(false);
 
   useEffect(() => {
+    
     dispatch(fetchSongStatistics());
+    
+    const intervalId = setInterval(() => {
+      dispatch(fetchSongStatistics());
+    }, 10000);
+
+    return () => clearInterval(intervalId);
   }, [dispatch]);
 
   const toggleStatisticsVisibility = () => {
@@ -78,7 +85,6 @@ const Statistics: React.FC = () => {
                   <StatsListItem key={artist}>
                     <span>{artist}:</span>
                     <span>
-                      
                       {totalSongs} {totalSongs === 1 ? 'song' : 'songs'}, {totalAlbums}{' '}
                       {totalAlbums === 1 ? 'album' : 'albums'}
                     </span>
